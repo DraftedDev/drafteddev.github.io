@@ -12,6 +12,7 @@
 
     <!-- Custom styles -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work%20Sans" rel="stylesheet"></link>
 
     <title>MineDrafter</title>
 
@@ -22,24 +23,35 @@
 
   <body>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <!-- Content -->
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav nav-cont">
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="navbar_icon"> &lt/&gt <span class="sr-only">(current)</span></a>
+          </li>
+          
           <li class="nav-item active">
             <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#software">Software</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact Me</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/DraftedDev" target="_blank">Github</a>
           </li>
@@ -47,66 +59,75 @@
       </div>
     </nav>
 
-    <div class="jumbotron text-center jumbotron-fluid" style="background-color:#292929;" id="software">
-      <h1 style="color:white;">Hi, I'm MineDrafter</h1>
-      <h6 style="color:white">and I like coding stuff...</h6>
+    <div class="jumbotron bg-light" id="home">
+      <h1 class="display-1">Hi, call me DraftedDev</h1>
+      <hr class="my-3">
+      <p class="lead">Bored german developer who makes dumb theories!</p>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h2><a href="https://drafteddev.itch.io/attracted2d" target="_blank" style="color:black;">Attracted2D - Game </a></h2>
-          <h5>My first game...</h5>
-          <h5>about jumping around and</h5>
-          <h5>using elevators.</h5>
-        </div>
+    <div class="jumbotron" id="about">
+      <h1 class="display-1">About</h1>
+      <hr class="my-3">
+      <p class="lead">
+        I'm from germany and I love gaming and coding stuff. <br>
+        I started coding with Java at the age of 11 and worked me
+        up to Game and Web Development <br>
+        with <a href="https://unity.com/" target="_blank" style="color:rgb(233, 20, 20);">Unity</a>/C# and JS/HTML/CSS. <br>
+        I have coding experience with Java, JavaScript, <br>
+        C#, some C/C++, the <a href="https://www.spigotmc.org/" target="_blank" style="color:rgb(233, 20, 20);">SpigotMC API</a>, the Unity API and some NodeJS. <br>
+        My tools: VS, VSCode, IntelliJ IDEA and the Unity Engine. <br>
+        <u>Not searching for Jobs but I'd like to work on some random new projects.</u>
+      </p>
 
-        <div style="width:40px;"></div>
-
-        <div class="col-sm-4" style="">
-          <h2><a href="https://drafteddev.itch.io/becoming-a-legend-for-dummies" target="_blank" style="color:black;">
-            Becoming a Legend for Dummies - Game </a></h2>
-          <h5>For the 4th Vulcan Game Jam!</h5>
-          <h5>2D Platformer</h5>
-        </div>
-      </div>
     </div>
 
-    <!-- Line Breaks -->
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-
-    <div class="jumbotron text-center jumbotron-fluid" style="background-color:#032c4b;" id="about">
-      <h1 style="color:white;">About Me</h1>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col align-self-center" style="border-width: 2px; border-style: solid; border-color:gray;">
-          <h3 style="text-align:center;"> Hi, I'm MineDrafter or DraftedDev and I'm a german developer and "philosoph" !</h3>
-          <h3 style="text-align:center;"> I code <a href="https://unity.com" target="_blank">Unity Games</a> with C# , Minecraft Modifications with <a href="https://fabricmc.net" target="_blank">FabricMC</a> and much more.</h3>
-          <h3 style="text-align:center;"> I started coding <a href="https://spigotmc.org" target="_blank">Minecraft plugins</a> with Java in young age and switched from</h3>
-          <h3 style="text-align:center;"> plugins to games and started developing actual Modifications for Minecraft.</h3>
-          <h3 style="text-align:center;"> I'm a big gamer but also a quick learner and think much about our life and the universe.</h3>
-          <h3 style="text-align:center;"> Developing in: Java, C# and some Python.</h3>
-          <h3 style="text-align:center;"> Learning: Python, C/C++ and probably much more!</h3>
+    <div class="jumbotron bg-light" id="software">
+      <h1 class="display-2">My Work</h1>
+      <hr class="my-3">
+      
+      <div class="card" style="width: 25vw; height: 0vh">
+        <div class="card-body">
+          <h5 class="card-title">Attracted2D - Game</h5>
+          <p class="card-text">My first little game made with the Unity Game Engine and C# :)</p>
+          <a href="https://drafteddev.itch.io/attracted2d" class="btn btn-primary">Go to project</a>
         </div>
       </div>
-    </div>
 
-    <br> <br> <br> <br> <br>
-
-    <div class="jumbotron text-center jumbotron-fluid" style="background-color:#4f0808;" id="contact">
-      <h1 style="color:white;">Contact Me</h1>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col align-self-center" style="border-width: 2px; border-style:solid; border-color:gray;">
-          <h2 style="text-align:center; color:purple;">Discord:</h2> <h3 style="text-align:center;">MineDrafter#4221</h3>
+      <div class="card" style="width: 25vw; height: 0vh; right: -35vw">
+        <div class="card-body">
+          <h5 class="card-title">Becoming a legend for dummies - Game</h5>
+          <p class="card-text">A game made for the 4th Vulcan Game Jam!</p>
+          <a href="https://drafteddev.itch.io/becoming-a-legend-for-dummies" class="btn btn-primary">Go to project</a>
         </div>
       </div>
+
     </div>
 
+    <div class="jumbotron" id="contact">
+      <h1 class="display-2"> Contact Me</h1>
+      <hr class="my-3">
+      <p class="lead">
+        Discord: MineDrafter#4221 <br>
+        SpigotMC (inactive): <a href="https://www.spigotmc.org/members/minedrafter.1056860/" target="_blank">click here</a> <br>
+        If you want my Hypixel forum account for some reason: <a href="https://hypixel.net/members/minedrafter.3791336/" target="_blank">click here</a>
+      </p>
+
+    </div>
+
+    <div class="jumbotron darker" id="impressum">
+      <hr class="my-1">
+      <p>
+        Known as DraftedDev and/or MineDrafter,
+        I'm not 18 and not liable for any damage my products (if not used by me) have done.
+        I also don't know how to write this
+        cause I'm not that smart haha. Pls help.
+      </p>
+      <hr class="my-1">
+    </div>
+
+    <!-- Content end -->
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

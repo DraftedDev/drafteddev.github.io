@@ -1,1 +1,80 @@
+#home {
+    height: 45vh;
+    text-align: center;
+    margin: 0;
+    color: rgb(114, 109, 109);
+    padding: 10vh;
+}
 
+#impressum {
+    padding: 0.5vh;
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+#about {
+    height: 50vh;
+    text-align: center;
+    margin: 0;
+    color: rgb(175, 48, 31);
+}
+
+#software {
+    height: 56vh;
+    text-align: center;
+    margin: 0;
+    color: rgb(42, 100, 177);
+}
+
+#contact {
+    height: 50vh;
+    text-align: center;
+    margin: 0;
+    color:rgb(111, 42, 141);
+}
+
+#navbar {
+    height: 6.3vh;
+    font-size: 1.3em;
+}
+
+#navbar_icon {
+    border: 0.1vw solid;
+}
+
+p {
+    font-family: 'Work Sans';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav-cont {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    padding: 1.5em;
+}
+
+.darker {
+    background-color: rgb(41, 39, 39);
+    color: rgb(155, 152, 152);
+}
+
+/* Custom scroll bar for WebKit (Edge, Chrome, etc.) */
+body::-webkit-scrollbar {
+    width: 0.75rem;
+}
+*::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #24222280;
+    border-radius: 999999px;
+}
