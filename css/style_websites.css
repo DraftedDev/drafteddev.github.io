@@ -1,0 +1,26 @@
+body {
+    overflow-x: hidden;
+}
+
+#navbar {
+    font-size: 1.5em;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+#template {
+    height: 40vh;
+    width: 17vw;
+    margin: 2%;
+    text-align: center;
+    font-family: "Work Sans";
+}
+
+#template .card-img-top {
+    margin-bottom: 2.5vh;
+    width: 8vw;
+    height: 18vh;
+}
+
