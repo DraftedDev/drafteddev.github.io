@@ -11,10 +11,7 @@ export default {
 			fallback: undefined,
 			precompress: true,
 			strict: true
-		}),
-		paths: {
-			base: dev ? '' : process.env.BASE_PATH
-		}
+		})
 	},
 
 	preprocess: [vitePreprocess({})]
