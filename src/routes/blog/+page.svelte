@@ -24,6 +24,10 @@
 		<ListgroupItem class="text-lg">
 			<a href="blog/post-01-welcome">Welcome to my Blog!</a>
 		</ListgroupItem>
+
+		<ListgroupItem class="text-lg">
+			<a href="blog/post-02-dart">Dart - The most underrated Language ever</a>
+		</ListgroupItem>
 	</Listgroup>
 </main>
 
