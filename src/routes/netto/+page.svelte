@@ -152,7 +152,7 @@
 
 	let abfrage = list[getRandIdx()];
 	let abfrageRichtig = -1;
-	let abfrageInput = 0;
+	let abfrageInput = '';
 	function getRandIdx(): number {
 		return Math.floor(Math.random() * list.length);
 	}
@@ -197,7 +197,7 @@
 	</Modal>
 
 	<Modal title="Artikel Abfrage" bind:open={openAbfrage} outsideclose>
-		<Heading class="text-center">{abfrage.name}</Heading>
+		<p class="text-center">{abfrage.name}</p>
 		<Label class="mb-2">Artikel Nummer?</Label>
 		<Input type="number" required bind:value={abfrageInput} />
 		{#if abfrageRichtig == 0}
@@ -209,7 +209,7 @@
 		<svelte:fragment slot="footer">
 			<Button
 				on:click={() => {
-					abfrageRichtig = abfrageInput == abfrage.num ? 1 : 0;
+					abfrageRichtig = parseInt(abfrageInput) == abfrage.num ? 1 : 0;
 				}}>Prüfen</Button
 			>
 			<Button
@@ -221,7 +221,7 @@
 				on:click={() => {
 					abfrage = list[getRandIdx()];
 					abfrageRichtig = -1;
-					abfrageInput = 0;
+					abfrageInput = '';
 				}}>Nächstes</Button
 			>
 			<Button
