@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import {
 		Button,
 		Modal,
@@ -13,6 +14,7 @@
 		Label,
 		Alert
 	} from 'flowbite-svelte';
+	import { writable } from 'svelte/store';
 	let openList = false;
 	let openAbfrage = false;
 	let list = [
@@ -38,7 +40,7 @@
 		},
 		{
 			name: 'Apfel (grün)',
-			num: 4
+			num: 21
 		},
 		{
 			name: 'Fleischtomaten',
@@ -150,6 +152,14 @@
 		}
 	];
 
+	const initPoints = browser ? window.localStorage.getItem('points') ?? '0' : '0';
+	const points = writable<string>(initPoints);
+	points.subscribe((value) => {
+		if (browser) {
+			window.localStorage.setItem('points', value);
+		}
+	});
+
 	let abfrage = list[getRandIdx()];
 	let abfrageRichtig = -1;
 	let abfrageInput = '';
@@ -159,8 +169,9 @@
 </script>
 
 <main class="grid">
+	<p class="text-center mt-8 text-xl">Punkte: {initPoints}</p>
 	<Button
-		class="place-self-center mt-24"
+		class="place-self-center mt-8"
 		on:click={() => {
 			openList = true;
 		}}
@@ -199,7 +210,7 @@
 	<Modal title="Artikel Abfrage" bind:open={openAbfrage} outsideclose>
 		<p class="text-center">{abfrage.name}</p>
 		<Label class="mb-2">Artikel Nummer?</Label>
-		<Input type="number" required bind:value={abfrageInput} />
+		<Inputr required bind:value={abfrageInput} />
 		{#if abfrageRichtig == 0}
 			<Alert color="red">Falsch. Versuch's nochmal D:</Alert>
 		{:else if abfrageRichtig == 1}
@@ -210,6 +221,9 @@
 			<Button
 				on:click={() => {
 					abfrageRichtig = parseInt(abfrageInput) == abfrage.num ? 1 : 0;
+					if (abfrageRichtig) {
+						points.set(`${points}`);
+					}
 				}}>Prüfen</Button
 			>
 			<Button
@@ -222,6 +236,8 @@
 					abfrage = list[getRandIdx()];
 					abfrageRichtig = -1;
 					abfrageInput = '';
+					if (abfrageRichtig == 1) {
+					}
 				}}>Nächstes</Button
 			>
 			<Button
