@@ -210,7 +210,7 @@
 	<Modal title="Artikel Abfrage" bind:open={openAbfrage} outsideclose>
 		<p class="text-center">{abfrage.name}</p>
 		<Label class="mb-2">Artikel Nummer?</Label>
-		<Inputr required bind:value={abfrageInput} />
+		<Input required bind:value={abfrageInput} />
 		{#if abfrageRichtig == 0}
 			<Alert color="red">Falsch. Versuch's nochmal D:</Alert>
 		{:else if abfrageRichtig == 1}
