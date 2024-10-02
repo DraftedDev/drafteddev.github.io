@@ -21,6 +21,33 @@
 	</svg>
 
 	<div class="flex">
+		<Card href="https://maycoon-ui.github.io" target="_blank" class="mt-20 text-center mr-32">
+			<Heading class="text-4xl">Maycoon</Heading>
+			<p class="text-gray-700 dark:text-gray-400 text-lg">
+				Powerful & beautiful UI framework written in Rust.
+			</p>
+		</Card>
+
+		<Card
+			href="https://github.com/DraftedDev/transhader"
+			target="_blank"
+			class="mt-20 text-center mr-32"
+		>
+			<Heading class="text-4xl">Transhader</Heading>
+			<p class="text-gray-700 dark:text-gray-400 text-lg">
+				A tool to translate shaders in Rust during compile time.
+			</p>
+		</Card>
+
+		<Card href="https://github.com/DraftedDev/vanadin" target="_blank" class="mt-20 text-center">
+			<Heading class="text-2xl">Vanadin</Heading>
+			<p class="text-gray-700 dark:text-gray-400 text-lg">
+				A small build and task system with easy to use JavaScript API.
+			</p>
+		</Card>
+	</div>
+
+	<div class="flex">
 		<Card
 			href="https://github.com/DraftedDev/qilin"
 			target="_blank"
@@ -54,6 +81,10 @@
 </main>
 
 <style lang="scss">
+	main {
+		margin-bottom: 100px;
+	}
+
 	svg {
 		display: block;
 		font-size: 5.5rem;
