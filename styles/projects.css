@@ -1,0 +1,9 @@
+.card {
+    height: 30vh;
+    width: 70vw;
+    background-color: rgb(250, 250, 250);
+}
+
+.card p {
+    color: black;
+}

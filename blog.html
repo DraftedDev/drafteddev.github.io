@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/blog.css" />
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dart.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked-highlight/lib/index.umd.js"></script>
+        <title>DraftedDev's Projects</title>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img
+                        class="navbar-item"
+                        id="nav-title"
+                        src="./assets/favicon.ico"
+                        alt="Logo"
+                    />
+                </a>
+
+                <a
+                    role="button"
+                    class="navbar-burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="./index.html"> Home </a>
+
+                    <a class="navbar-item" href="./projects.html"> Projects </a>
+
+                    <a
+                        class="navbar-item is-active has-text-white"
+                        href="./blog.html"
+                    >
+                        Blog
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" id="nav-contact"> Contact Me </a>
+
+                        <div class="navbar-dropdown is-right">
+                            <a
+                                class="navbar-item"
+                                target="_blank"
+                                href="https://github.com/drafteddev"
+                            >
+                                GitHub: 'DraftedDev'
+                            </a>
+                            <a
+                                class="navbar-item"
+                                target="_blank"
+                                href="https://reddit.com/u/drafteddev"
+                            >
+                                Reddit: 'u/DraftedDev'
+                            </a>
+                            <a class="navbar-item" href="mailto:mp@ypon.com">
+                                E-Mail: 'mp@ypon.com'
+                            </a>
+                            <div class="navbar-item">Discord: 'drafteddev'</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-body is-align-self-center">
+                <div class="container">
+                    <div class="mt-4 title gradient-text">My Blog</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="blogs has-text-black"></div>
+
+        <script src="scripts/blog.js"></script>
+    </body>
+</html>

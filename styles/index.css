@@ -1,0 +1,50 @@
+#hero-content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.hero-name {
+    display: inline-block;
+}
+
+.type1 {
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1.5s steps(25, end) forwards;
+}
+
+.type2 {
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1.5s steps(25, end) forwards;
+    animation-delay: 1.5s;
+}
+
+.type3 {
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1.5s steps(25, end) forwards;
+    animation-delay: 3s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        border-color: black;
+    }
+
+    90% {
+        border-color: black;
+    }
+
+    to {
+        width: 100%;
+        border-color: transparent;
+    }
+}

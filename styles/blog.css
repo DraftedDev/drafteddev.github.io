@@ -1,0 +1,43 @@
+.blogs {
+    text-align: center;
+}
+
+.blog-item {
+    border: 1.5px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 2.5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    width: 60vw;
+}
+
+.blog-item h1 {
+    font-size: 1.5em;
+    font-weight: 750;
+}
+
+.blog {
+    text-align: start;
+    margin-right: 15vw;
+    margin-left: 15vw;
+    background-color: rgb(230, 230, 230);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.blog h1,
+h2,
+h3,
+h4,
+strong {
+    color: black !important;
+}
+
+.blog pre,
+code {
+    all: revert;
+    border-radius: 5px;
+}
