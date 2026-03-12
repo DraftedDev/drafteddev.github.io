@@ -9,6 +9,11 @@
       "title": "Dart: The most underrated programming language",
       "date": "March 10, 2026",
       "file": "dart.md"
+    },
+    {
+      "title": "How to tune Rust for maximum performance",
+      "date": "March 12, 2026",
+      "file": "rust-performance.md"
     }
   ]
 }
