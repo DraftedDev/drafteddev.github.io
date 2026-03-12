@@ -38,6 +38,7 @@ strong {
 
 .blog pre,
 code {
-    all: revert;
+    border-width: 0px;
     border-radius: 5px;
+    padding: 5px;
 }
