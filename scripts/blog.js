@@ -16,7 +16,7 @@ async function loadBlogPosts() {
         <div class="blog-item">
           <h1>${post.title}</h1>
           <p>${post.date}</p>
-          <a onclick="readPost('${post.file}')">Read More</a>
+          <a href="./blog.html?read=${post.file}">Read More</a>
         <div />
       `;
       blogs.appendChild(postElement);
@@ -64,4 +64,11 @@ async function readPost(file) {
   });
 }
 
-loadBlogPosts();
+const params = new URLSearchParams(window.location.search);
+const readFile = params.get("read");
+
+if (readFile) {
+  readPost(readFile);
+} else {
+  loadBlogPosts();
+}
