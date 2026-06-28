@@ -110,10 +110,46 @@ rustflags = [
 ]
 ```
 
+## Result
+
+**Wrapping everything up, you got this final `.cargo/config.toml`:**
+
+```toml
+# This will compile even in debug mode!
+[build]
+rustflags = [
+    "-Ctarget-cpu=native",
+    "-Cpasses=sroa,licm,gvn,loop-simplify,aggressive-instcombine,loop-deletion,memcpyopt,tailcallelim,adce"
+]
+
+[profile.release]
+# Built-in release profile: opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+```
+
+**A slightly better version with the `profile-rustflags` feature:**
+
+```toml
+[profile.release]
+# Built-in release profile: opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+rustflags = [
+    "-Ctarget-cpu=native",
+    "-Cpasses=sroa,licm,gvn,loop-simplify,aggressive-instcombine,loop-deletion,memcpyopt,tailcallelim,adce"
+]
+```
+
+
 ## Summary
 
 This guide goes through configuration of rust for maximum performance.
 
 I may also make a guide to optimize for compile time and maybe an in-depth guide to optimizing rust code itself.
 
-**Fun Fact:** A clean hello-world release build, without any options set, takes `0.57s`, while adding all the above mentioned optimizations bring compilation time up to `10.72s`. That's `1880 %` slower.
+**Fun Fact:** A clean hello-world release build, without any options set, takes `0.57s`, while adding all the above mentioned optimizations bring compilation time up to `10.72s`. That's `1880 %` slower compile times.
